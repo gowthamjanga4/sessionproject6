@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results Page</title>
+</head>
+<body>
+    <div>
+        {% if request.session %}
+        <h1>Hi check your details below</h1><hr>
+            {% for key,val in request.session.items %}
+                <ul>
+                    <li>{{key | upper}}:{{val | lower }}</li>
+                </ul>
+            {% endfor %}
+        {% else %}
+            <h1>No records found....</h1>
+        {% endif %}
+    </div>
+</body>
+</html>
