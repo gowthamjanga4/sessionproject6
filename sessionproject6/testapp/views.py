@@ -2,7 +2,7 @@ from django.shortcuts import render
 from testapp.forms import *
 
 
-# Create your views here.
+# ADd your views here.
 
 def name_view(request):
     name = NameForm()
